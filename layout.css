@@ -1,0 +1,66 @@
+#main {width:965px; margin:0 auto;}
+
+#header {height:365px;}
+#header, #content, #footer { font-size:0.75em;}
+#header .row-3 img { border:1px solid #000;}
+#header .row-3 a:hover img { border:1px solid #fff;}
+
+.col-1, .col-2, .col-3 { float:left;}
+
+/*======= index.html =======*/
+#page1 #content .row-1 .col-1 {width:693px; margin-right:31px;}
+#page1 #content .row-1 .col-2 { width:241px;}
+#page1 #content .row-2 .line-ver { background-position:644px top;}
+#page1 #content .row-2 .col-1 {width:650px; margin-right:19px;}
+#page1 #content .row-2 .col-2 { width:290px;}
+
+/*======= about.html =======*/
+#page2 #content .row-1 .line-ver { background-position:690px top;}
+#page2 #content .row-1 .col-1 { width:681px; margin-right:27px;}
+#page2 #content .row-1 .col-2 {width:241px;}
+#page2 #content .row-2 .line-ver { background-position:644px top;}
+#page2 #content .row-2 .col-1 {width:635px; margin-right:34px;}
+#page2 #content .row-2 .col-2 { width:290px;}
+
+/*======= gallery.html =======*/
+#page3 #content .row-1 .col-1 {width:693px; margin-right:31px;}
+#page3 #content .row-1 .col-2 { width:241px;}
+#page3 #content .row-2 .line-ver { background-position:644px top;}
+#page3 #content .row-2 .col-1 {width:451px; margin-right:52px;}
+#page3 #content .row-2 .col-2 { width:448px;}
+
+/*======= teachers.html =======*/
+#page4 #content .line-ver { background-position:644px top;}
+#page4 #content .col-1 {width:625px; margin-right:44px;}
+#page4 #content .col-2 { width:290px;}
+
+/*======= faq.html =======*/
+#page5 #content .line-ver { background-position:248px top;}
+#page5 #content .col-1 {width:231px; margin-right:38px;}
+#page5 #content .col-2 { width:693px;}
+
+/*======= testimonials.html =======*/
+#page6 #content .line-ver { background-position:644px top;}
+#page6 #content .line-ver-top { background-position:644px top;}
+#page6 #content .col-1 {width:621px; margin-right:34px;}
+#page6 #content .col-2 { width:310px;}
+
+/*======= contact.html =======*/
+#page7 #content .line-ver { background-position:644px top;}
+#page7 #content .col-1 {width:625px; margin-right:44px;}
+#page7 #content .col-2 { width:290px;}
+#page7 #content .col-1 .col-1 { width:278px; margin-right:43px;}
+#page7 #content .col-1 .col-2 { width:274px;}
+
+/*======= resources.html =======*/
+#page8 #content .line-ver { background-position:620px top;}
+#page8 #content .col-1 {width:300px; margin-right:25px;}
+#page8 #content .col-2 {width:300px; margin-right:25px;}
+#page8 #content .col-3 { width:290px;}
+
+/*=========================*/
+
+
+#footer {height:67px;}
+#footer_right {float:right; height:67px;margin-top:-50px;}
+
