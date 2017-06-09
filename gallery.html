@@ -14,6 +14,8 @@
 	<link href="css/lg-transitions.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/lightgallery.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/flipping_gallery.css" rel="stylesheet" type="text/css" />
+	<link href="css/video-gal.css" rel="stylesheet" type="text/css" />
+	<link href="css/" rel="stylesheet" type="text/css" />
 	<!--[if IE]>
 		<link href="ie_style.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
@@ -22,11 +24,39 @@
 	<script src="../code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="js/lightgallery.min.js"></script>
     <script src="js/flipping_gallery.min.js"></script>
-    <!--<script type="text/javascript">
+    <script src="js/video-gal.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
     $(document).ready(function() {
-        $("#lightgallery").lightGallery(); 
+        $('.fancybox').fancybox({
+            padding   : 0,
+            maxWidth  : '100%',
+            maxHeight : '100%',
+            width   : 560,
+            height    : 315,
+            autoSize  : true,
+            closeClick  : true,
+            openEffect  : 'elastic',
+            closeEffect : 'elastic'
+        });
+
+        var offset = 220;
+        var duration = 500;
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > offset) {
+            $('.scroll-top').fadeIn(duration);
+            } else {
+            $('.scroll-top').fadeOut(duration);
+            }
+        });
+        $('.scroll-top').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+        
     });
-    </script>-->
+    </script>
     <script>
         $(document).ready( function() {
             $(".gallery").flipping_gallery({
@@ -42,8 +72,13 @@
             $(".gallery").flipBackward();
             return false;
             });
+
+             $("#lightgallery").lightGallery({
+                thumbnail:true,
+                animateThumb: false,
+                showThumbByDefault: false
+            }); 
         });
-            
         </script>
         <style>
         .gallery > a > img {
@@ -106,56 +141,6 @@
                     </div>-->
 	                <!-- ---END--- -->
 
-                    <!-- NEW GALLERY CODE -->
-                    <!--<div id="lightgallery">
-                        <a href="/images/gallery/1.jpg">
-                            <img src="/images/gallery/1.jpg" />
-                        </a>
-                        <a href="/images/gallery/2.jpg">
-                            <img src="/images/gallery/2.jpg" />
-                        </a>
-                         <a href="/images/gallery/3.jpg">
-                            <img src="/images/gallery/1.jpg" />
-                        </a>
-                         <a href="/images/gallery/4.jpg">
-                            <img src="/images/gallery/4.jpg" />
-                        </a>
-                         <a href="/images/gallery/5.jpg">
-                            <img src="/images/gallery/5.jpg" />
-                        </a>
-                         <a href="/images/gallery/6.jpg">
-                            <img src="/images/gallery/6.jpg" />
-                        </a>
-                         <a href="/images/gallery/7.jpg">
-                            <img src="/images/gallery/7.jpg" />
-                        </a>
-                         <a href="/images/gallery/9.jpg">
-                            <img src="/images/gallery/9.jpg" />
-                        </a>
-                         <a href="/images/gallery/10.jpg">
-                            <img src="/images/gallery/11.jpg" />
-                        </a>
-                         <a href="/images/gallery/11.jpg">
-                            <img src="/images/gallery/12.jpg" />
-                        </a>
-                         <a href="/images/gallery/13.jpg">
-                            <img src="/images/gallery/13.jpg" />
-                        </a>
-                         <a href="/images/gallery/14.jpg">
-                            <img src="/images/gallery/14.jpg" />
-                        </a>
-                         <a href="/images/gallery/15.jpg">
-                            <img src="/images/gallery/15.jpg" />
-                        </a>
-                         <a href="/images/gallery/17.jpg">
-                            <img src="/images/gallery/17.jpg" />
-                        </a>
-                         <a href="/images/gallery/18.jpg">
-                            <img src="/images/gallery/18.jpg" />
-                        </a>
-                    </div>-->
-                                        <!-- END -->
-
                     <!-- Flipping Gallery -->
                     <div class="gallery">
                         <a href="#" data-caption=""><img src="/images/gallery/1.jpg"></a>
@@ -186,6 +171,109 @@
                      <br /><br /><br />
                      <br /><br /><br />
                      <h2>Video Gallery</h2>
+
+                    <!-- NEW GALLERY CODE -->
+                     <div>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/lElcP85tNMA">
+                        <img class="videoThumb" src="/images/thumbs/video1-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                     <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/6NJWZbyLT3g">
+                        <img class="videoThumb" src="/images/thumbs/video2-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/Qt5CksYYuFo">
+                        <img class="videoThumb" src="/images/thumbs/video3-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/8KuJ08vDCtg">
+                        <img class="videoThumb" src="/images/thumbs/video4-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <!--<article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/ngDsJ4w1Fx0">
+                        <img class="videoThumb" src="/images/thumbs/video5-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>-->
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/7l5sHSU4Ckk">
+                        <img class="videoThumb" src="/images/thumbs/video6-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/lyRj7T9hgsg">
+                        <img class="videoThumb" src="/images/thumbs/video7-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/iyVE_vlgWJ4">
+                        <img class="videoThumb" src="/images/thumbs/video8-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/eDGD3LCDk6o">
+                        <img class="videoThumb" src="/images/thumbs/video9-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/U3j4tS3RqHQ">
+                        <img class="videoThumb" src="/images/thumbs/video10-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/9Gwcl8NhKp0">
+                        <img class="videoThumb" src="/images/thumbs/video11-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/zNKXsjR5c1c">
+                        <img class="videoThumb" src="/images/thumbs/video12-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/IZUJyBwi2yA">
+                        <img class="videoThumb" src="/images/thumbs/video13-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    <article class="video">
+                        <figure>
+                        <a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/62K8-LjyJ44">
+                        <img class="videoThumb" src="/images/thumbs/video14-thmb.jpg"></a>
+                        </figure>
+                        <h2 class="videoTitle"></h2>
+                    </article>
+                    </div>
+                    <!-- END -->
                      
 
                   </div>
@@ -203,6 +291,7 @@
                            It should also be noted here that anyone considering a career in any facet of music should consider studying the piano . Many music schools require at least one semester of piano, regardless of your major.
                         </div>
                   </div>
+                   
                </div>
 			<br/><br/>
 			<!-- AddThis Button BEGIN -->
