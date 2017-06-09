@@ -10,10 +10,46 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link href="layout.css" rel="stylesheet" type="text/css" />
+    <link href="css/lg-fb-comment-box.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/lg-transitions.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/lightgallery.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/flipping_gallery.css" rel="stylesheet" type="text/css" />
 	<!--[if IE]>
 		<link href="ie_style.css" rel="stylesheet" type="text/css" />
 	<![endif]-->
 	<script src="js/swfobject.js" type="text/javascript" ></script>
+    <script src="../code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="../code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script src="js/flipping_gallery.min.js"></script>
+    <!--<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+    });
+    </script>-->
+    <script>
+        $(document).ready( function() {
+            $(".gallery").flipping_gallery({
+            enableScroll: true,
+            autoplay: 2000
+            });
+            
+            $(".next").click(function() {
+            $(".gallery").flipForward();
+            return false;
+            });
+            $(".prev").click(function() {
+            $(".gallery").flipBackward();
+            return false;
+            });
+        });
+            
+        </script>
+        <style>
+        .gallery > a > img {
+            width:250px;
+        }
+        </style>
 </head>
 
 
@@ -59,7 +95,7 @@
                      <h2>Photo Gallery</h2>
 
 	                <!-- ---BEGIN GALLERY CODE--- -->
-                    <script type="text/javascript">
+                    <!--<script type="text/javascript">
                         var params = {bgcolor: "#ffffff"};
                         swfobject.embedSWF("pg.swf", "myAlternativeContent", "620", "500", "9.0.0",false, flashvars, params);
                     </script>
@@ -67,35 +103,90 @@
                         <a href="http://www.adobe.com/go/getflashplayer">
                         <img src="../www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
                         </a>
-                    </div>
+                    </div>-->
 	                <!-- ---END--- -->
 
+                    <!-- NEW GALLERY CODE -->
+                    <!--<div id="lightgallery">
+                        <a href="/images/gallery/1.jpg">
+                            <img src="/images/gallery/1.jpg" />
+                        </a>
+                        <a href="/images/gallery/2.jpg">
+                            <img src="/images/gallery/2.jpg" />
+                        </a>
+                         <a href="/images/gallery/3.jpg">
+                            <img src="/images/gallery/1.jpg" />
+                        </a>
+                         <a href="/images/gallery/4.jpg">
+                            <img src="/images/gallery/4.jpg" />
+                        </a>
+                         <a href="/images/gallery/5.jpg">
+                            <img src="/images/gallery/5.jpg" />
+                        </a>
+                         <a href="/images/gallery/6.jpg">
+                            <img src="/images/gallery/6.jpg" />
+                        </a>
+                         <a href="/images/gallery/7.jpg">
+                            <img src="/images/gallery/7.jpg" />
+                        </a>
+                         <a href="/images/gallery/9.jpg">
+                            <img src="/images/gallery/9.jpg" />
+                        </a>
+                         <a href="/images/gallery/10.jpg">
+                            <img src="/images/gallery/11.jpg" />
+                        </a>
+                         <a href="/images/gallery/11.jpg">
+                            <img src="/images/gallery/12.jpg" />
+                        </a>
+                         <a href="/images/gallery/13.jpg">
+                            <img src="/images/gallery/13.jpg" />
+                        </a>
+                         <a href="/images/gallery/14.jpg">
+                            <img src="/images/gallery/14.jpg" />
+                        </a>
+                         <a href="/images/gallery/15.jpg">
+                            <img src="/images/gallery/15.jpg" />
+                        </a>
+                         <a href="/images/gallery/17.jpg">
+                            <img src="/images/gallery/17.jpg" />
+                        </a>
+                         <a href="/images/gallery/18.jpg">
+                            <img src="/images/gallery/18.jpg" />
+                        </a>
+                    </div>-->
+                                        <!-- END -->
+
+                    <!-- Flipping Gallery -->
+                    <div class="gallery">
+                        <a href="#" data-caption=""><img src="/images/gallery/1.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/2.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/3.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/4.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/5.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/6.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/7.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/8.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/10.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/11.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/13.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/14.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/15.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/17.jpg"></a>
+                        <a href="#" data-caption=""><img src="/images/gallery/18.jpg"></a>
+                    </div>
+                                <!-- End -->
+
+                     <br /><br /><br />
+                     <br /><br /><br />
+                     <br /><br /><br />
+                     <br /><br /><br />
+                     <br /><br /><br />
+                     <br /><br /><br />
+                     <br /><br /><br />
+                     <br /><br /><br />
                      <br /><br /><br />
                      <h2>Video Gallery</h2>
-                     <br />
-                     	<strong>Toccata No 4 by Johann Sebastian Bach</strong><br />
-						<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/qo_VRNRgGak" frameborder="0" allowFullScreen></iframe>
-                     <br /><br /><br />
-                     	<strong>Fur Elise by Ludwig van Beethoven</strong><br />
-						<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/RSk7_z34PIQ" frameborder="0" allowFullScreen></iframe>
-                     <br /><br /><br />
-                     	<strong>Elegy by Grieg , Prelude in c# minor by S. Rachmaninov</strong><br />
-                     	<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/1seav-UE4xE" frameborder="0" allowFullScreen></iframe>
-                     <br /><br /><br />
-                     	<strong>Solfegetto by Carl Bach, Valse by F. Chopin, Prelude by I. Bach</strong><br />
-                     	<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/7yCunVbVKgo" frameborder="0" allowFullScreen></iframe>
-                     <br /><br /><br />
-                     	<strong>Minuet in g , minuet in d by I.Bach and Arabesques by Burgmuller</strong><br />
-                     	<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/MIPS52mA4nQ" frameborder="0" allowFullScreen></iframe>
-                     <br /><br /><br />
-                     	<strong>Soft Showe Boggie, Fur Elise, by Beethoven, Song of India by Rimsky-Korsakov</strong><br />
-                     	<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/xt82ORJM_fw" frameborder="0" allowFullScreen></iframe>
-                     <br /><br /><br />
-                     	<strong>Indian Brave, When the Saints go Marching In</strong><br />
-                     	<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/bpcdKmrFQWo" frameborder="0" allowFullScreen></iframe>
-                     <br /><br /><br />
-                     	<strong>Arabesgue, by Burgmuller, Clown by D. Kabalevsky</strong><br />
-                     	<iframe title="YouTube video player" class="youtube-player" type="text/html" width="620" height="379" src="http://www.youtube.com/embed/UwhBP4SAMbw" frameborder="0" allowFullScreen></iframe>
+                     
 
                   </div>
                   <div class="col-2">
