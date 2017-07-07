@@ -7,6 +7,8 @@ input, select, textarea { font-family:Georgia, "Times New Roman", Times, serif; 
 .fright { float:right;}
 .clear { clear:both;}
 
+.col-1, .col-2 {font-size: 15px;}
+
 .alignright { text-align:right;}
 .aligncenter { text-align:center;}
 
